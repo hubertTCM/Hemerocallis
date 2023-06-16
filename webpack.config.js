@@ -1,10 +1,11 @@
 const path = require("path");
 const HtmlWebpackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require("copy-webpack-plugin");
 
 module.exports = {
   entry: "./src/index.tsx",
   output: {
-    filename: "main.js",
+    filename: "content.js",
     path: path.resolve(__dirname, "build"),
   },
   module: {
@@ -19,10 +20,6 @@ module.exports = {
         exclude: /node_modules/,
         use: {
           loader: "babel-loader",
-          options: {
-            presets: ["@babel/preset-env", "@babel/preset-react"],
-            // presets: ["@babel/react", "@babel/es2015"],
-          },
         },
       },
       {
@@ -42,11 +39,20 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "public", "index.html"),
     }),
+    new CopyPlugin({
+      patterns: [{ from: "public/manifest.json" }],
+    }),
   ],
+  //   devServer: {
+  //     static: {
+  //       directory: path.join(__dirname, "build"),
+  //     },
+  //     port: 3000,
+  //   },
+
+  mode: "development",
+  devtool: "inline-source-map",
   devServer: {
-    static: {
-      directory: path.join(__dirname, "build"),
-    },
-    port: 3000,
+    static: "./dist",
   },
 };
