@@ -7,4 +7,5 @@ chrome extension to epub
   - https://medium.com/@tharshita13/creating-a-chrome-extension-with-react-a-step-by-step-guide-47fe9bab24a1
   - https://www.youtube.com/watch?v=8OCEfOKzpAw
   - https://craco.js.org/docs/configuration/webpack/
+  - https://craco.js.org/docs/configuration/webpack/
 - 
