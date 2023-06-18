@@ -11,9 +11,8 @@
     "web-vitals": "^3.3.2"
   },
   "scripts": {
-    "build": "webpack --mode production",
-    "start-ts": "webpack --watch --config webpack.dev.ts",
-    "start": "webpack --watch --config webpack.config.js"
+    "build": "webpack --config webpack.prod.ts",
+    "start": "webpack --watch --config webpack.dev.ts"
   },
   "eslintConfig": {
     "extends": [
