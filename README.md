@@ -9,4 +9,5 @@ chrome extension to epub
   - https://www.youtube.com/watch?v=8OCEfOKzpAw
   - https://craco.js.org/docs/configuration/webpack/
   - https://webpack.js.org/configuration/configuration-languages/#typescript
+  - https://developer.chrome.com/docs/extensions/mv3/manifest/
 -
