@@ -4,15 +4,19 @@ import CopyPlugin from "copy-webpack-plugin";
 import path from "path";
 
 const config: Configuration = {
-  entry: "./src/index.tsx",
+  entry: {
+    main: "./src/index.tsx",
+    background: "./src/extension/background.ts",
+  },
   output: {
-    filename: "content.js",
+    filename: "[name].js",
     path: path.resolve(__dirname, "build"),
+    sourceMapFilename: "[name].map",
   },
   resolve: {
-    //   alias: {
-    //     "@src": path.resolve(__dirname, "src/"),
-    //   },
+    alias: {
+      "@src": path.resolve(__dirname, "src/"),
+    },
     extensions: ["*", ".js", ".jsx", ".ts", ".tsx"],
   },
   module: {
@@ -47,6 +51,7 @@ const config: Configuration = {
   plugins: [
     new HtmlWebpackPlugin({
       template: path.join(__dirname, "public", "index.html"),
+      chunks: ["main"],
     }),
     new CopyPlugin({
       patterns: [{ from: "public/manifest.json" }],

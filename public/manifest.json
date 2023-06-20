@@ -4,14 +4,10 @@
   "name": "Book Reader Extension",
   "description": "This is a Chrome extension to read epub books",
   "action": {
-    "default_popup": "index.html",
     "default_title": "Book Reader Extension"
   },
-  "content_scripts": [
-    {
-      "matches": ["http://*/*", "https://*/*"],
-      "js": ["./content.js"]
-    }
-  ],
-  "permissions": ["activeTab"]
+  "permissions": ["activeTab"],
+  "background": {
+    "service_worker": "background.js"
+  }
 }
