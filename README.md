@@ -15,7 +15,12 @@ chrome extension to epub
 - react library
 
   - chakra ui https://chakra-ui.com/getting-started
+    - https://react-icons.github.io/react-icons/search?q=folder
   - epub: http://epubjs.org/documentation/0.3/
+    - https://npm.io/package/epubjs
+    - https://github.com/futurepress/epub.js
+    - https://github.com/altmshfkgudtjr/react-epub-viewer
 
-- features
-  - reader epub, aws3
+- features:
+  - read epub, aws3
+  - export notes
