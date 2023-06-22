@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 
-import { Book } from 'epubjs';
+import { useEpubView } from './use_epub_view';
 
 export type Props = {
   url: string;
@@ -8,22 +8,14 @@ export type Props = {
 
 const EpubViewer: React.FunctionComponent<Props> = ({ url }) => {
   const ref = useRef<HTMLDivElement | null>(null);
-  const [book, setBook] = useState<Book | null>(null);
-
+  const [container, setContainer] = useState<HTMLDivElement | null>(null);
   useEffect(() => {
-    if (!ref.current) {
-      return;
+    if (ref.current) {
+      setContainer(ref.current);
     }
-    const temp = new Book(url);
-    const rendition = temp.renderTo(ref.current, {
-      flow: 'pagination',
-      width: '900',
-      height: '600',
-    });
-    rendition.display();
-    setBook(temp);
-    return () => temp.destroy();
-  }, [url, ref]);
+  }, [ref]);
+
+  useEpubView(container, url);
   return <div ref={ref}></div>;
 };
 
