@@ -20,6 +20,7 @@ chrome extension to epub
     - https://npm.io/package/epubjs
     - https://github.com/futurepress/epub.js
     - https://github.com/altmshfkgudtjr/react-epub-viewer
+    - https://github.com/johnfactotum/epubjs-tips/blob/master/README.md
 
 - features:
   - read epub, aws3
