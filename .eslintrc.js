@@ -34,4 +34,7 @@ module.exports = {
       },
     ],
   },
+
+  //  not sure how to config lint for webpack configuration file separately, ignore for now
+  ignorePatterns: ['webpack.*.ts'],
 };
