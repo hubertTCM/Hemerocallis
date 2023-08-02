@@ -23,8 +23,13 @@ chrome extension to epub
     - https://github.com/altmshfkgudtjr/react-epub-viewer
     - https://github.com/johnfactotum/epubjs-tips/blob/master/README.md
     - https://www.npmjs.com/package/react-reader
-    - https://github.com/aerkalov/ebooklib
-    - https://github.com/johnfactotum/foliate-js
+    - https://github.com/aerkalov/ebooklib (EbookLib is a Python library for managing EPUB2/EPUB3 and Kindle files)
+    - https://github.com/johnfactotum/foliate-js (支持各种格式，但是 import 不方便)
+    - https://github.com/janeczku/calibre-web (calibre, python + js)
+    - djvu.js https://github.com/RussCoder/djvujs
+    - mobi reader https://github.com/asfdg21/mobi_reader/tree/master
+    - https://github.com/koreader/koreader ebook reader in mobile
+    - https://github.com/kovidgoyal/calibre clibre
 
 - features:
   - read epub, aws3
